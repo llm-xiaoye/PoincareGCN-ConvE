@@ -1,0 +1,4 @@
+motor_1	exhibits	overheat
+vibration	resolved_by	balance_rotor
+winding_2	related_fault	winding_short
+abnormal_noise	caused_by	bearing_wear

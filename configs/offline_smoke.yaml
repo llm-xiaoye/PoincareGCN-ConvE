@@ -1,0 +1,33 @@
+# 模型运行配置。
+seed: 42
+
+data:
+  add_inverse_relations: true
+
+model:
+  embedding_dim: 8
+  gcn_dim: 8
+  num_filters: 4
+  kernel_size: 2
+  reshape_height: 4
+  reshape_width: 4
+  curvature: 1.0
+  graph_dropout: 0.0
+  hidden_dropout: 0.0
+  feature_dropout: 0.0
+
+training:
+  epochs: 2
+  batch_size: 4
+  optimizer: riemannian_adam
+  learning_rate: 0.005
+  weight_decay: 0.0
+  label_smoothing: 0.0
+  gradient_clip: 1.0
+  patience: 2
+  min_delta: 0.0
+  num_workers: 0
+
+evaluation:
+  batch_size: 8
+  hits: [1, 3, 5]

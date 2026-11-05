@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "使用本软件时，请引用此项目。"
+title: "PoincareGCN-ConvE：知识图谱补全"
+type: software
+version: 1.0.0
+authors:
+  - name: "llm-xiaoye"
+repository-code: "https://github.com/llm-xiaoye/PoincareGCN-ConvE"
+license: MIT

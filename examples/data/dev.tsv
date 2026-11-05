@@ -1,0 +1,4 @@
+motor_1	exhibits	abnormal_noise
+overheat	resolved_by	replace_winding
+bearing_1	related_fault	bearing_wear
+motor_2	has_part	bearing_2

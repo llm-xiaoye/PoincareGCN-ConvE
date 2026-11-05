@@ -1,0 +1,19 @@
+# Synthetic demonstration data only.
+motor_1	has_part	bearing_1
+motor_1	has_part	winding_1
+motor_2	has_part	bearing_2
+motor_2	has_part	winding_2
+overheat	caused_by	bearing_wear
+overheat	caused_by	winding_short
+abnormal_noise	caused_by	bearing_wear
+vibration	caused_by	rotor_imbalance
+bearing_wear	resolved_by	replace_bearing
+winding_short	resolved_by	replace_winding
+rotor_imbalance	resolved_by	balance_rotor
+bearing_1	related_fault	bearing_wear
+bearing_2	related_fault	bearing_wear
+winding_1	related_fault	winding_short
+winding_2	related_fault	winding_short
+motor_1	exhibits	overheat
+motor_2	exhibits	vibration
+motor_2	exhibits	abnormal_noise

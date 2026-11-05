@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "poincare-gcn-conve"
+version = "1.0.0"
+description = "PoincareGCN-ConvE：知识图谱补全"
+readme = "README.md"
+requires-python = ">=3.10"
+authors = [
+  { name = "llm-xiaoye" }
+]
+keywords = [
+  "knowledge-graph-completion",
+  "link-prediction",
+  "hyperbolic-neural-network",
+  "poincare-ball",
+  "graph-convolution",
+  "conve",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+  "geoopt>=0.5.1",
+  "numpy>=1.24",
+  "PyYAML>=6.0",
+  "torch>=2.1",
+  "tqdm>=4.66",
+]
+
+[project.optional-dependencies]
+dev = [
+  "pytest>=8.0",
+  "ruff>=0.5",
+]
+
+[project.scripts]
+poincare-validate = "poincare_gcn_conve.cli:validate_main"
+poincare-split = "poincare_gcn_conve.cli:split_main"
+poincare-train = "poincare_gcn_conve.cli:train_main"
+poincare-evaluate = "poincare_gcn_conve.cli:evaluate_main"
+poincare-predict = "poincare_gcn_conve.cli:predict_main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+filterwarnings = [
+  "ignore:`torch.jit.script` is deprecated:DeprecationWarning",
+]
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]

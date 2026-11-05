@@ -1,0 +1,32 @@
+seed: 42
+
+data:
+  add_inverse_relations: true
+
+model:
+  embedding_dim: 100
+  gcn_dim: 100
+  num_filters: 64
+  kernel_size: 3
+  reshape_height: 10
+  reshape_width: 20
+  curvature: 1.0
+  graph_dropout: 0.1
+  hidden_dropout: 0.2
+  feature_dropout: 0.2
+
+training:
+  epochs: 200
+  batch_size: 128
+  optimizer: riemannian_adam
+  learning_rate: 0.001
+  weight_decay: 0.0
+  label_smoothing: 0.1
+  gradient_clip: 1.0
+  patience: 20
+  min_delta: 0.0001
+  num_workers: 0
+
+evaluation:
+  batch_size: 128
+  hits: [1, 3, 5, 10]
